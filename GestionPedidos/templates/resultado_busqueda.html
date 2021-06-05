@@ -1,0 +1,27 @@
+<html>
+<title>
+
+</title>
+<body>
+
+ Tu busqueda es: <strong> {{query}} </strong> 
+
+ {% if articulos %}
+    <p>Articulos encontrados: {{articulos|length}}</p>
+
+    <ul>
+        {% for articulo in articulos %}
+
+        <li>
+            {{articulo.nombre}} &nbsp; {{articulo.seccion}} &nbsp; {{articulo.precio}}
+        </li>
+        {% endfor %}
+    </ul>
+{% else %}
+
+    <p>El articulo no se ha encontrado</p>
+    
+
+ {% endif %}
+</body>
+</html>
